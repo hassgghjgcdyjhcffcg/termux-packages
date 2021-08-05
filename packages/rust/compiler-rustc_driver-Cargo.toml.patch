@@ -1,0 +1,11 @@
+diff --git a/compiler/rustc_driver/Cargo.toml b/compiler/rustc_driver/Cargo.toml
+index 57159962a9e..6cba88226e3 100644
+--- a/compiler/rustc_driver/Cargo.toml
++++ b/compiler/rustc_driver/Cargo.toml
+@@ -41,3 +41,6 @@ winapi = { version = "0.3", features = ["consoleapi", "debugapi", "processenv"]
+ [features]
+ llvm = ['rustc_interface/llvm']
+ max_level_info = ['tracing/max_level_info']
++
++[target.armv7-linux-androideabi]
++ldflags = "-lgcc -lfake-lib -Wl,-no-such-flag"
